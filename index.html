@@ -1,0 +1,1456 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="44422013-96dc-488d-b4cf-145ee1ddcbf7" data-section-id="44422013-96dc-488d-b4cf-145ee1ddcbf7">
+
+<htmlCode>
+<div id="root">
+    <nav class="fixed w-full bg-neutral-900 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-yellow-400 font-bold text-2xl">I Eat JS</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#hero" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Home</a>
+                        <a href="#jsPlayground" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Playground</a>
+                        <a href="#interactiveExamples" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Examples</a>
+                        <a href="#funProjects" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Projects</a>
+                        <a href="#codeSnippets" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Snippets</a>
+                        <a href="#jsAnimations" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Animations</a>
+                        <a href="#communitySection" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Community</a>
+                        <a href="#contact" class="text-gray-300 hover:text-yellow-400 px-3 py-2">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menuBtn" class="text-gray-300 hover:text-yellow-400">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-neutral-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hero" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Home</a>
+                <a href="#jsPlayground" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Playground</a>
+                <a href="#interactiveExamples" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Examples</a>
+                <a href="#funProjects" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Projects</a>
+                <a href="#codeSnippets" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Snippets</a>
+                <a href="#jsAnimations" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Animations</a>
+                <a href="#communitySection" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Community</a>
+                <a href="#contact" class="text-gray-300 hover:text-yellow-400 block px-3 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="bg-neutral-900 min-h-screen pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-[70vh]">
+            <h1 class="text-6xl md:text-8xl font-bold text-yellow-400 mb-8 animate__animated animate__bounceIn">
+                I Eat <span class="text-yellow-500">{JS}</span>
+            </h1>
+            <p class="text-gray-300 text-xl md:text-2xl text-center mb-12 max-w-2xl animate__animated animate__fadeIn">
+                Because why use any other language when JavaScript can do it all? 
+                Watch me turn coffee into code with pure JS magic! ☕✨
+            </p>
+            <div class="flex space-x-4 animate__animated animate__fadeInUp">
+                <button class="bg-yellow-400 text-neutral-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-500 transition-all">
+                    Explore JS Magic
+                </button>
+                <button class="border-2 border-yellow-400 text-yellow-400 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 hover:text-neutral-900 transition-all">
+                    View Examples
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-0 w-full overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="text-neutral-800">
+                <path fill="currentColor" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for(let link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</div>
+</htmlCode></element><element id="9ee71fea-d894-4c45-b8bd-300b5f555d83" data-section-id="9ee71fea-d894-4c45-b8bd-300b5f555d83">
+
+<htmlCode>
+<div id="root">
+    <section id="jsPlayground" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                JS Playground
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Color Generator</h3>
+                    <div id="colorBox" class="w-full h-40 rounded-lg mb-4 flex items-center justify-center bg-gray-700">
+                        <span id="colorCode" class="text-white font-mono">#??????</span>
+                    </div>
+                    <button onclick="generateColor()" class="w-full bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                        Generate Color
+                    </button>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Text Transformer</h3>
+                    <textarea id="inputText" class="w-full h-40 p-4 rounded-lg bg-neutral-800 text-white mb-4" placeholder="Enter some text..."></textarea>
+                    <div class="flex space-x-2">
+                        <button onclick="transformText('uppercase')" class="flex-1 bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            UPPERCASE
+                        </button>
+                        <button onclick="transformText('lowercase')" class="flex-1 bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            lowercase
+                        </button>
+                        <button onclick="transformText('reverse')" class="flex-1 bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Reverse
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-4">Counter Game</h3>
+                <div class="flex items-center justify-center space-x-6">
+                    <button onclick="updateCounter(-1)" class="text-4xl bg-yellow-400 text-neutral-900 w-12 h-12 rounded-full font-bold hover:bg-yellow-500 transition-all">-</button>
+                    <span id="counter" class="text-6xl font-bold text-white">0</span>
+                    <button onclick="updateCounter(1)" class="text-4xl bg-yellow-400 text-neutral-900 w-12 h-12 rounded-full font-bold hover:bg-yellow-500 transition-all">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function generateColor() {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById('colorBox').style.backgroundColor = randomColor;
+            document.getElementById('colorCode').textContent = randomColor;
+        }
+
+        function transformText(type) {
+            const input = document.getElementById('inputText');
+            switch(type) {
+                case 'uppercase':
+                    input.value = input.value.toUpperCase();
+                    break;
+                case 'lowercase':
+                    input.value = input.value.toLowerCase();
+                    break;
+                case 'reverse':
+                    input.value = input.value.split('').reverse().join('');
+                    break;
+            }
+        }
+
+        let count = 0;
+        function updateCounter(value) {
+            count += value;
+            document.getElementById('counter').textContent = count;
+            const counter = document.getElementById('counter');
+            counter.classList.add('animate__animated', 'animate__rubberBand');
+            setTimeout(() => {
+                counter.classList.remove('animate__animated', 'animate__rubberBand');
+            }, 1000);
+        }
+    </script>
+</div>
+</htmlCode></element><element id="e65ec5a9-41a1-4d96-b10f-cace87fa1ab9" data-section-id="e65ec5a9-41a1-4d96-b10f-cace87fa1ab9">
+
+<htmlCode>
+<div id="root">
+    <section id="interactiveExamples" class="bg-neutral-900 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                Interactive Examples
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Typing Effect Card -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Typing Effect</h3>
+                    <div class="h-40 flex items-center justify-center bg-neutral-700 rounded-lg p-4">
+                        <span id="typingText" class="text-white font-mono"></span>
+                        <span id="cursor" class="text-yellow-400">|</span>
+                    </div>
+                </div>
+
+                <!-- Particle System -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeIn">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Particle System</h3>
+                    <div id="particleContainer" class="h-40 bg-neutral-700 rounded-lg relative overflow-hidden">
+                        <canvas id="particleCanvas" class="w-full h-full"></canvas>
+                    </div>
+                </div>
+
+                <!-- Interactive Shape -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Shape Morpher</h3>
+                    <div class="h-40 flex items-center justify-center">
+                        <div id="morphShape" class="w-32 h-32 bg-yellow-400 transition-all duration-300 cursor-pointer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Typing Effect
+        const texts = ["console.log('Hello World!')", "const life = 'JavaScript'", "while(coding) { beHappy() }"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function typeText() {
+            const currentText = texts[textIndex];
+            const typingElement = document.getElementById('typingText');
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 50;
+                setTimeout(typeText, 1500);
+                return;
+            }
+
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typingSpeed = 100;
+            }
+
+            setTimeout(typeText, typingSpeed);
+        }
+
+        // Cursor Blink
+        setInterval(() => {
+            const cursor = document.getElementById('cursor');
+            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+        }, 500);
+
+        // Particle System
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        const particles = [];
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 2;
+                this.vy = (Math.random() - 0.5) * 2;
+                this.radius = Math.random() * 3;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#FBBF24';
+                ctx.fill();
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < 30; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        // Shape Morpher
+        let shapeState = 0;
+        const morphShape = document.getElementById('morphShape');
+        morphShape.addEventListener('click', () => {
+            shapeState = (shapeState + 1) % 4;
+            switch(shapeState) {
+                case 0:
+                    morphShape.style.borderRadius = '0';
+                    break;
+                case 1:
+                    morphShape.style.borderRadius = '50%';
+                    break;
+                case 2:
+                    morphShape.style.borderRadius = '0';
+                    morphShape.style.transform = 'rotate(45deg)';
+                    break;
+                case 3:
+                    morphShape.style.transform = 'rotate(0deg)';
+                    morphShape.style.borderRadius = '30% 70% 70% 30% / 30% 30% 70% 70%';
+                    break;
+            }
+        });
+
+        // Initialize everything
+        window.addEventListener('load', () => {
+            typeText();
+            resizeCanvas();
+            initParticles();
+            animate();
+        });
+
+        window.addEventListener('resize', resizeCanvas);
+    </script>
+</div>
+</htmlCode></element><element id="391d1729-f6a1-4da4-bc07-b098510350b3" data-section-id="391d1729-f6a1-4da4-bc07-b098510350b3">
+
+<htmlCode>
+<div id="root">
+    <section id="funProjects" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                Fun Projects
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Memory Game -->
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Memory Game</h3>
+                    <div id="memoryGame" class="grid grid-cols-4 gap-2 mb-4">
+                    </div>
+                    <button id="startMemoryGame" class="w-full bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                        Start New Game
+                    </button>
+                </div>
+
+                <!-- Emoji Rain -->
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Emoji Rain</h3>
+                    <div id="emojiContainer" class="h-64 bg-neutral-800 rounded-lg relative overflow-hidden">
+                        <div id="score" class="absolute top-2 right-2 text-white font-bold">Score: 0</div>
+                    </div>
+                    <button id="startEmojiRain" class="w-full bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all mt-4">
+                        Make it Rain!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Memory Game
+        const emojis = ['🎮', '🚀', '🎨', '💻', '🎮', '🚀', '🎨', '💻'];
+        let flippedCards = [];
+        let matchedPairs = 0;
+
+        function createMemoryGame() {
+            const gameContainer = document.getElementById('memoryGame');
+            gameContainer.innerHTML = '';
+            matchedPairs = 0;
+            
+            const shuffledEmojis = [...emojis].sort(() => Math.random() - 0.5);
+            
+            shuffledEmojis.forEach((emoji, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-neutral-700 h-20 rounded-lg flex items-center justify-center cursor-pointer text-3xl';
+                card.dataset.emoji = emoji;
+                card.dataset.index = index;
+                card.innerHTML = '?';
+                card.addEventListener('click', flipCard);
+                gameContainer.appendChild(card);
+            });
+        }
+
+        function flipCard() {
+            if (flippedCards.length === 2) return;
+            if (flippedCards.includes(this)) return;
+
+            this.innerHTML = this.dataset.emoji;
+            flippedCards.push(this);
+
+            if (flippedCards.length === 2) {
+                setTimeout(checkMatch, 500);
+            }
+        }
+
+        function checkMatch() {
+            const [card1, card2] = flippedCards;
+            if (card1.dataset.emoji === card2.dataset.emoji) {
+                card1.style.backgroundColor = '#059669';
+                card2.style.backgroundColor = '#059669';
+                matchedPairs++;
+                if (matchedPairs === emojis.length / 2) {
+                    alert('You won! 🎉');
+                }
+            } else {
+                card1.innerHTML = '?';
+                card2.innerHTML = '?';
+            }
+            flippedCards = [];
+        }
+
+        // Emoji Rain
+        const emojiRainEmojis = ['🍕', '🌟', '🎸', '🎮', '💡'];
+        let score = 0;
+        let isRaining = false;
+
+        function createEmoji() {
+            if (!isRaining) return;
+            
+            const emoji = document.createElement('div');
+            emoji.className = 'absolute text-2xl cursor-pointer';
+            emoji.style.left = `${Math.random() * 90}%`;
+            emoji.style.top = '-20px';
+            emoji.innerHTML = emojiRainEmojis[Math.floor(Math.random() * emojiRainEmojis.length)];
+            
+            document.getElementById('emojiContainer').appendChild(emoji);
+
+            let position = -20;
+            const fall = setInterval(() => {
+                if (position > 300) {
+                    clearInterval(fall);
+                    emoji.remove();
+                }
+                position += 2;
+                emoji.style.top = `${position}px`;
+            }, 20);
+
+            emoji.addEventListener('click', () => {
+                score += 10;
+                document.getElementById('score').textContent = `Score: ${score}`;
+                emoji.remove();
+                clearInterval(fall);
+            });
+        }
+
+        // Event Listeners
+        document.getElementById('startMemoryGame').addEventListener('click', createMemoryGame);
+        
+        document.getElementById('startEmojiRain').addEventListener('click', function() {
+            isRaining = !isRaining;
+            this.textContent = isRaining ? 'Stop Rain' : 'Make it Rain!';
+            if (isRaining) {
+                score = 0;
+                document.getElementById('score').textContent = 'Score: 0';
+                setInterval(createEmoji, 1000);
+            }
+        });
+
+        // Initialize Memory Game on load
+        createMemoryGame();
+    </script>
+</div>
+</htmlCode></element><element id="052cafc3-5b67-4617-812b-33087ff56b05" data-section-id="052cafc3-5b67-4617-812b-33087ff56b05">
+
+<htmlCode>
+<div id="root">
+    <section id="codeSnippets" class="bg-neutral-900 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                Tasty Code Snippets
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Array Methods -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-yellow-400">Array Magic</h3>
+                        <button onclick="runArrayExample()" class="bg-yellow-400 text-neutral-900 px-4 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Run
+                        </button>
+                    </div>
+                    <pre class="bg-neutral-900 p-4 rounded-lg text-gray-300 overflow-x-auto"><code>// Mind-blowing array transformation
+const numbers = [1, 2, 3, 4, 5];
+const magic = numbers
+  .map(n => n * 2)
+  .filter(n => n > 5)
+  .reduce((a, b) => a + b);
+
+console.log(magic); // What's the result? 🤔</code></pre>
+                    <div id="arrayResult" class="mt-4 text-green-400 font-mono hidden"></div>
+                </div>
+
+                <!-- Promise Fun -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-yellow-400">Promise Party</h3>
+                        <button onclick="runPromiseExample()" class="bg-yellow-400 text-neutral-900 px-4 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Run
+                        </button>
+                    </div>
+                    <pre class="bg-neutral-900 p-4 rounded-lg text-gray-300 overflow-x-auto"><code>async function orderPizza() {
+  try {
+    await new Promise(r => setTimeout(r, 2000));
+    return '🍕 Delivered!';
+  } catch {
+    return '😢 No pizza today';
+  }
+}</code></pre>
+                    <div id="promiseResult" class="mt-4 text-green-400 font-mono hidden"></div>
+                </div>
+
+                <!-- DOM Manipulation -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-yellow-400">DOM Tricks</h3>
+                        <button onclick="runDomExample()" class="bg-yellow-400 text-neutral-900 px-4 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Try Me
+                        </button>
+                    </div>
+                    <pre class="bg-neutral-900 p-4 rounded-lg text-gray-300 overflow-x-auto"><code>function createChaos() {
+  const box = document.getElementById('chaosBox');
+  box.style.transform = 
+    `rotate(${Math.random() * 360}deg) 
+     scale(${Math.random() + 0.5})`;
+}</code></pre>
+                    <div id="chaosBox" class="w-16 h-16 bg-yellow-400 mx-auto mt-4 transition-all duration-500"></div>
+                </div>
+
+                <!-- Object Destructuring -->
+                <div class="bg-neutral-800 p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-yellow-400">Object Magic</h3>
+                        <button onclick="runObjectExample()" class="bg-yellow-400 text-neutral-900 px-4 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Run
+                        </button>
+                    </div>
+                    <pre class="bg-neutral-900 p-4 rounded-lg text-gray-300 overflow-x-auto"><code>const wizard = {
+  name: 'JavaScript Wizard',
+  powers: ['DOM', 'API', 'Async'],
+  level: 9001
+};
+
+const {name, ...skills} = wizard;</code></pre>
+                    <div id="objectResult" class="mt-4 text-green-400 font-mono hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function runArrayExample() {
+            const numbers = [1, 2, 3, 4, 5];
+            const result = numbers
+                .map(n => n * 2)
+                .filter(n => n > 5)
+                .reduce((a, b) => a + b);
+            
+            const resultDiv = document.getElementById('arrayResult');
+            resultDiv.textContent = `Result: ${result}`;
+            resultDiv.classList.remove('hidden');
+        }
+
+        async function runPromiseExample() {
+            const resultDiv = document.getElementById('promiseResult');
+            resultDiv.textContent = 'Ordering pizza...';
+            resultDiv.classList.remove('hidden');
+            
+            const result = await orderPizza();
+            resultDiv.textContent = result;
+        }
+
+        function runDomExample() {
+            const box = document.getElementById('chaosBox');
+            box.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() + 0.5})`;
+        }
+
+        function runObjectExample() {
+            const wizard = {
+                name: 'JavaScript Wizard',
+                powers: ['DOM', 'API', 'Async'],
+                level: 9001
+            };
+
+            const {name, ...skills} = wizard;
+            const resultDiv = document.getElementById('objectResult');
+            resultDiv.textContent = `Wizard ${name} has ${Object.keys(skills).length} skill groups`;
+            resultDiv.classList.remove('hidden');
+        }
+
+        async function orderPizza() {
+            try {
+                await new Promise(r => setTimeout(r, 2000));
+                return '🍕 Delivered!';
+            } catch {
+                return '😢 No pizza today';
+            }
+        }
+    </script>
+</div>
+</htmlCode></element><element id="a428a492-6a55-4776-9b4c-ef6f4b715b75" data-section-id="a428a492-6a55-4776-9b4c-ef6f4b715b75">
+
+<htmlCode>
+<div id="root">
+    <section id="jsAnimations" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                JS Animations Gallery
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bouncing Ball -->
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Bouncing Ball</h3>
+                    <div class="h-64 bg-neutral-800 rounded-lg relative overflow-hidden">
+                        <div id="bouncingBall" class="absolute w-8 h-8 bg-yellow-400 rounded-full"></div>
+                    </div>
+                    <button onclick="toggleBounce()" class="w-full mt-4 bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                        Toggle Animation
+                    </button>
+                </div>
+
+                <!-- Spinning Cube -->
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">3D Transform</h3>
+                    <div class="h-64 bg-neutral-800 rounded-lg relative overflow-hidden perspective">
+                        <div id="cube" class="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div class="absolute w-full h-full bg-yellow-400 opacity-80"></div>
+                        </div>
+                    </div>
+                    <button onclick="toggleSpin()" class="w-full mt-4 bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                        Toggle Spin
+                    </button>
+                </div>
+
+                <!-- Wave Text -->
+                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Wave Text</h3>
+                    <div id="waveContainer" class="h-64 bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <div id="waveText" class="text-4xl font-bold text-yellow-400"></div>
+                    </div>
+                    <button onclick="toggleWave()" class="w-full mt-4 bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                        Toggle Wave
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .perspective {
+            perspective: 1000px;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(200px); }
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotateX(0) rotateY(0); }
+            100% { transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg); }
+        }
+
+        .bounce-animation {
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        .spin-animation {
+            animation: spin 3s linear infinite;
+        }
+    </style>
+
+    <script>
+        // Bouncing Ball
+        let isBouncing = false;
+        function toggleBounce() {
+            const ball = document.getElementById('bouncingBall');
+            if (isBouncing) {
+                ball.classList.remove('bounce-animation');
+            } else {
+                ball.classList.add('bounce-animation');
+            }
+            isBouncing = !isBouncing;
+        }
+
+        // Spinning Cube
+        let isSpinning = false;
+        function toggleSpin() {
+            const cube = document.getElementById('cube');
+            if (isSpinning) {
+                cube.classList.remove('spin-animation');
+            } else {
+                cube.classList.add('spin-animation');
+            }
+            isSpinning = !isSpinning;
+        }
+
+        // Wave Text
+        let waveInterval;
+        let isWaving = false;
+        function toggleWave() {
+            const text = "JavaScript";
+            const waveText = document.getElementById('waveText');
+            
+            if (isWaving) {
+                clearInterval(waveInterval);
+                waveText.innerHTML = '';
+            } else {
+                let counter = 0;
+                waveInterval = setInterval(() => {
+                    waveText.innerHTML = text.split('').map((char, i) => {
+                        const offset = Math.sin(counter + i * 0.5) * 20;
+                        return `<span style="display: inline-block; transform: translateY(${offset}px)">${char}</span>`;
+                    }).join('');
+                    counter += 0.1;
+                }, 50);
+            }
+            isWaving = !isWaving;
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleBounce();
+            toggleSpin();
+            toggleWave();
+        });
+    </script>
+</div>
+</htmlCode></element><element id="dc882a9d-0761-4eab-9bb2-f83d549143a3" data-section-id="dc882a9d-0761-4eab-9bb2-f83d549143a3">
+
+<htmlCode>
+<div id="root">
+    <section id="communitySection" class="bg-neutral-900 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                Join Our JS Eating Community
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Community Stats -->
+                <div class="bg-neutral-800 p-8 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-6">Community Stats</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-neutral-700 rounded-lg">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2" id="memberCount">0</div>
+                            <div class="text-gray-300">JS Eaters</div>
+                        </div>
+                        <div class="text-center p-4 bg-neutral-700 rounded-lg">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2" id="projectCount">0</div>
+                            <div class="text-gray-300">Projects</div>
+                        </div>
+                        <div class="text-center p-4 bg-neutral-700 rounded-lg">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2" id="snippetCount">0</div>
+                            <div class="text-gray-300">Snippets</div>
+                        </div>
+                        <div class="text-center p-4 bg-neutral-700 rounded-lg">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2" id="contributorCount">0</div>
+                            <div class="text-gray-300">Contributors</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Feed -->
+                <div class="bg-neutral-800 p-8 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-6">Latest Updates</h3>
+                    <div class="space-y-4" id="communityFeed">
+                        <div class="bg-neutral-700 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-neutral-900 font-bold">JS</div>
+                                <div class="ml-3">
+                                    <div class="text-white font-bold">JavaScript Wizard</div>
+                                    <div class="text-gray-400 text-sm">2 hours ago</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300">Just created a new recursive function that makes coffee! ☕</p>
+                        </div>
+                        <div class="bg-neutral-700 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-neutral-900 font-bold">CD</div>
+                                <div class="ml-3">
+                                    <div class="text-white font-bold">Code Devourer</div>
+                                    <div class="text-gray-400 text-sm">5 hours ago</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300">Check out my new Promise-based pizza ordering system! 🍕</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join Community Form -->
+            <div class="bg-neutral-800 p-8 rounded-lg shadow-lg max-w-2xl mx-auto animate__animated animate__fadeInUp">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-6 text-center">Join the Fun!</h3>
+                <form id="joinForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-300 mb-2">Favorite JS Method</label>
+                        <input type="text" class="w-full bg-neutral-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="map(), reduce(), filter()...">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-2">Your JS Power Level</label>
+                        <select class="w-full bg-neutral-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <option>Beginner Muncher</option>
+                            <option>Code Devourer</option>
+                            <option>JavaScript Wizard</option>
+                            <option>Framework Destroyer</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-400 text-neutral-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                        Join the Community
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animate counting stats
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            
+            function step(timestamp) {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+            
+            window.requestAnimationFrame(step);
+        }
+
+        // Start animations when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue("memberCount", 0, 1337, 2000);
+                    animateValue("projectCount", 0, 420, 2000);
+                    animateValue("snippetCount", 0, 789, 2000);
+                    animateValue("contributorCount", 0, 256, 2000);
+                }
+            });
+        });
+
+        observer.observe(document.getElementById('communitySection'));
+
+        // Form submission
+        document.getElementById('joinForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const button = e.target.querySelector('button');
+            button.innerHTML = 'Welcome to the Club! 🎉';
+            button.disabled = true;
+            setTimeout(() => {
+                button.innerHTML = 'Join the Community';
+                button.disabled = false;
+            }, 3000);
+        });
+    </script>
+</div>
+</htmlCode></element><element id="b8211c5d-d308-4a67-88ee-a7ffeb49da34" data-section-id="b8211c5d-d308-4a67-88ee-a7ffeb49da34">
+
+<htmlCode>
+<div id="root">
+    <section id="contact" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12 animate__animated animate__fadeIn">
+                Send Me Your JS Problems
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-neutral-900 p-8 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-yellow-400 mb-2">Name *</label>
+                            <input type="text" required class="w-full bg-neutral-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="const yourName = ...">
+                        </div>
+                        <div>
+                            <label class="block text-yellow-400 mb-2">Email *</label>
+                            <input type="email" required class="w-full bg-neutral-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="email@javascript.dev">
+                        </div>
+                        <div>
+                            <label class="block text-yellow-400 mb-2">JS Problem Category</label>
+                            <select class="w-full bg-neutral-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all">
+                                <option>Callback Hell</option>
+                                <option>Promise Chaos</option>
+                                <option>Array Method Madness</option>
+                                <option>DOM Drama</option>
+                                <option>Other Bug Species</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-yellow-400 mb-2">Your Code Problem *</label>
+                            <textarea required rows="4" class="w-full bg-neutral-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="// Paste your code here&#10;function myBuggyCode() {&#10;  // What's wrong? 🤔&#10;}"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-400 text-neutral-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Execute Contact.send()
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Fun Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-neutral-900 p-8 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-6">Contact Methods</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-gray-400">Email</div>
+                                    <div class="text-white">js.eater@javascript.dev</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-gray-400">Discord</div>
+                                    <div class="text-white">JSEater#1337</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="messageStatus" class="bg-neutral-900 p-8 rounded-lg shadow-lg animate__animated animate__fadeInRight hidden">
+                        <div class="text-center">
+                            <div id="statusIcon" class="w-16 h-16 mx-auto mb-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-yellow-400 mb-2">Message Received!</h3>
+                            <p class="text-gray-400">Your code problem has been queued in the event loop. We'll get back to you ASAP!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const button = this.querySelector('button');
+            button.innerHTML = 'Processing...';
+            button.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('messageStatus').classList.remove('hidden');
+                document.getElementById('messageStatus').classList.add('animate__fadeIn');
+                
+                // Reset form
+                this.reset();
+                button.innerHTML = 'Execute Contact.send()';
+                button.disabled = false;
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('messageStatus').classList.add('animate__fadeOut');
+                    setTimeout(() => {
+                        document.getElementById('messageStatus').classList.add('hidden');
+                        document.getElementById('messageStatus').classList.remove('animate__fadeOut');
+                    }, 1000);
+                }, 5000);
+            }, 2000);
+        });
+    </script>
+</div>
+</htmlCode></element><element id="a8258ab1-5044-4269-b780-5037be1c2375" data-section-id="a8258ab1-5044-4269-b780-5037be1c2375">
+
+<htmlCode>
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-yellow-400">I Eat JS</h3>
+                    <p class="text-gray-400">Consuming JavaScript, one function at a time. Because who needs other languages when JS can do it all?</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-yellow-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#jsPlayground" class="text-gray-400 hover:text-yellow-400 transition-colors">JS Playground</a></li>
+                        <li><a href="#interactiveExamples" class="text-gray-400 hover:text-yellow-400 transition-colors">Examples</a></li>
+                        <li><a href="#funProjects" class="text-gray-400 hover:text-yellow-400 transition-colors">Fun Projects</a></li>
+                        <li><a href="#codeSnippets" class="text-gray-400 hover:text-yellow-400 transition-colors">Code Snippets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-yellow-400">Community</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Discord Server</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">GitHub</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">CodePen</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Dev.to</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-yellow-400">Newsletter</h4>
+                    <p class="text-gray-400">Subscribe for weekly JS recipes!</p>
+                    <form id="newsletterForm" class="space-y-2">
+                        <input type="email" placeholder="your@email.com" class="w-full bg-neutral-800 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <button type="submit" class="w-full bg-yellow-400 text-neutral-900 py-2 rounded-lg font-bold hover:bg-yellow-500 transition-all">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 mb-4 md:mb-0">
+                        © 2024 I Eat JS. Cooked with 🧡 and JavaScript
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            const input = this.querySelector('input');
+            
+            button.innerHTML = 'Subscribing...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = 'Subscribed! 🎉';
+                input.value = '';
+                
+                setTimeout(() => {
+                    button.innerHTML = 'Subscribe';
+                    button.disabled = false;
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
